@@ -24,7 +24,7 @@ img {
 .header ul li {
   color: #fff;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .item {
     border: 2px solid #aa9b77;
     padding: 15px;
@@ -35,18 +35,18 @@ img {
     overflow: hidden;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
   .item {
     border: 2px solid #aa9b77;
     padding: 15px;
     background-color: #f5f6f7;
     display: inline-block;
-    width: 25%;
+    width: 33.333333333333336%;
     margin: 1em;
     overflow: hidden;
   }
 }
-@media screen and (max-width: 992px) and (min-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 992px) {
   .item {
     border: 2px solid #aa9b77;
     padding: 15px;
@@ -57,7 +57,7 @@ img {
     overflow: hidden;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .item {
     border: 2px solid #aa9b77;
     padding: 15px;
