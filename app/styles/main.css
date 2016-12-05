@@ -1,0 +1,70 @@
+.CustomColor {
+  color: #aa9b77;
+}
+.text-rigth {
+  text-align: right;
+}
+.item-footer {
+  width: 50%;
+  display: inline-block;
+}
+select {
+  border: none;
+  background-color: #f5f6f7;
+  color: #aa9b77;
+}
+img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.header ul li {
+  color: #fff;
+}
+@media screen and (min-width: 1200px) {
+  .item {
+    border: 2px solid #aa9b77;
+    padding: 15px;
+    background-color: #f5f6f7;
+    display: inline-block;
+    width: 33.333333333333336%;
+    margin: 1em;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 992px) {
+  .item {
+    border: 2px solid #aa9b77;
+    padding: 15px;
+    background-color: #f5f6f7;
+    display: inline-block;
+    width: 25%;
+    margin: 1em;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .item {
+    border: 2px solid #aa9b77;
+    padding: 15px;
+    background-color: #f5f6f7;
+    display: inline-block;
+    width: 91.66666666666667%;
+    margin: 1em;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 768px) {
+  .item {
+    border: 2px solid #aa9b77;
+    padding: 15px;
+    background-color: #f5f6f7;
+    display: inline-block;
+    width: 100%;
+    margin: 1em;
+    overflow: hidden;
+  }
+}
