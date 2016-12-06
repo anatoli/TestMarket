@@ -8,14 +8,18 @@
   width: 50%;
   display: inline-block;
 }
+.wrap:hover,
+.wrap:focus,
+.active {
+  border: 4px solid #aa9b77;
+}
+.wrap {
+  padding: 15px;
+}
 select {
   border: none;
   background-color: #f5f6f7;
   color: #aa9b77;
-}
-img {
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 .row {
   margin-left: -15px;
@@ -24,47 +28,124 @@ img {
 .header ul li {
   color: #fff;
 }
-@media screen and (max-width: 1200px) {
+.parent {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 99;
+}
+.block img {
+  display: block;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.shadow {
+  background: #000;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: .7;
+  transform: scale(3, 3);
+}
+.filter {
+  display: flex;
+  width: 100%;
+  background-color: #f4f5f6;
+  padding: 3em;
+}
+.filter input[type="checkbox"] {
+  color: #aa9b77;
+}
+.row {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+@media screen and (min-width: 1200px) {
   .item {
-    border: 2px solid #aa9b77;
-    padding: 15px;
-    background-color: #f5f6f7;
     display: inline-block;
-    width: 33.333333333333336%;
+    background-color: #f5f6f7;
+    width: 25%;
     margin: 1em;
     overflow: hidden;
+    margin-left: 40px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   .item {
-    border: 2px solid #aa9b77;
-    padding: 15px;
-    background-color: #f5f6f7;
     display: inline-block;
-    width: 33.333333333333336%;
+    background-color: #f5f6f7;
+    width: 25%;
     margin: 1em;
     overflow: hidden;
+    margin-left: 40px;
   }
 }
-@media screen and (max-width: 768px) and (min-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .item {
-    border: 2px solid #aa9b77;
-    padding: 15px;
+    display: table-caption;
     background-color: #f5f6f7;
-    display: inline-block;
-    width: 91.66666666666667%;
+    width: 50%;
     margin: 1em;
     overflow: hidden;
+    margin-left: 40px;
+  }
+  .navbar-right {
+    float: right !important;
+    margin-right: 10px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .item {
-    border: 2px solid #aa9b77;
-    padding: 15px;
+    display: table-caption;
     background-color: #f5f6f7;
-    display: inline-block;
     width: 100%;
     margin: 1em;
     overflow: hidden;
   }
+}
+.navbar-default {
+  background-color: rgba(248, 248, 248, 0);
+  border-color: rgba(231, 231, 231, 0);
+}
+.navbar {
+  position: absolute;
+  color: #fff;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  z-index: 100;
+}
+.navbar-right {
+  float: right !important;
+  margin-right: 10px;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #d2c99c;
+  background-color: transparent;
+}
+.cart-active {
+  color: forestgreen;
+}
+.seeAll {
+  color: #fff;
+  background-color: #aa9b77;
+  width: 193px;
+  margin-top: -8px;
+}
+.marketing {
+  padding-left: 15px;
 }

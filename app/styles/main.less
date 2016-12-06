@@ -2,8 +2,14 @@
 @width: 100%;
 
 
+//colors
+
+@color1: #aa9b77;
+
+
+
 .CustomColor{
-  color:#aa9b77
+  color:@color1
 }
 .text-rigth{
   text-align: right;
@@ -12,16 +18,18 @@
   width: 50%;
   display: inline-block;
 }
+.wrap:hover, .wrap:focus, .active {
+  border: 4px solid @color1;
+}
+.wrap{
+  padding: 15px;
+}
 select{
   border: none;
   background-color:#f5f6f7;
-  color:#aa9b77;
+  color:@color1;
 }
 
-img{
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
 .row {
   margin-left: -15px;
   margin-right: -15px;
@@ -30,47 +38,140 @@ img{
   color:#fff;
 }
 
-@media screen and (max-width: 1200px){
+.parent {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 99;
+}
+
+.block {
+
+
+  img {
+    display: block;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+//.item{
+//  margin-left: 0 !important;;
+//}
+.shadow{
+  background: #000;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: .7;
+  transform: scale(3,3);
+}
+
+.filter{
+  display: flex;
+  width: 100%;
+  background-color: #f4f5f6;
+  padding: 3em;
+}
+.filter input[type="checkbox"]{
+  color: @color1;
+}
+.row{
+  margin-left: 15px;
+  margin-right:15px;
+}
+
+@media screen and (min-width: 1200px) {
   .item{
-    border: 2px solid #aa9b77;
-    padding:15px;
-    background-color:#f5f6f7;
+    //border: 2px solid @color1;
     display: inline-block;
-    width: @item-width / 12 * 4;
+    background-color: #f5f6f7;
+    width: 25%;
     margin: 1em;
     overflow: hidden;
+    margin-left: 40px;
   }
 }
-@media screen and (max-width: 992px){
+@media screen and (min-width: 992px) and(max-width: 1199px) {
   .item{
-    border: 2px solid #aa9b77;
-    padding:15px;
-    background-color:#f5f6f7;
+    //border: 2px solid @color1;
     display: inline-block;
-    width: @item-width / 12 * 4;
+    background-color:#f5f6f7;
+    width: @item-width / 12 * 3;
     margin: 1em;
     overflow: hidden;
+    margin-left: 40px;
   }
 }
-@media screen and (max-width: 768px) and (min-width: 992px){
+@media screen and (min-width: 768px)and(max-width: 991px) {
   .item{
-    border: 2px solid #aa9b77;
-    padding:15px;
+    //border: 2px solid @color1;
+    display: table-caption;
     background-color:#f5f6f7;
-    display: inline-block;
-    width: @item-width / 12 * 11;
+    width: @item-width / 12 * 6;
     margin: 1em;
     overflow: hidden;
+    margin-left: 40px;
+  }
+  .navbar-right {
+    float: right !important;
+    margin-right: 10px;
   }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px) {
   .item{
-    border: 2px solid #aa9b77;
-    padding:15px;
+
+    //border: 2px solid @color1;
+    display: table-caption;
     background-color:#f5f6f7;
-    display: inline-block;
     width: @item-width;
     margin: 1em;
     overflow: hidden;
   }
+}
+.navbar-default {
+  background-color: rgba(248, 248, 248, 0);
+  border-color: rgba(231, 231, 231, 0);
+}
+.navbar {
+  position: absolute;
+  color: #fff;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  z-index: 100;
+}
+.navbar-right {
+  float: right !important;
+  margin-right: 10px;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #d2c99c;
+  background-color: transparent;
+}
+.cart-active{
+  color: forestgreen;
+}
+.seeAll{
+  color: #fff;
+  background-color: @color1;
+  width: 193px;
+  margin-top: -8px;
+}
+
+.marketing{
+  padding-left: 15px;
 }

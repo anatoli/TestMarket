@@ -29,7 +29,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     // Project settings
-    yeoman: appConfig,
+
     less: {
       development: {
         options: {
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
         }
       }
     },
-
+    yeoman: appConfig,
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {

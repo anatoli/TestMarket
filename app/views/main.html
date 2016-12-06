@@ -1,20 +1,72 @@
+<div class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
 
-<div class="row marketing">
-  <div class="item">
-    <div>
-      <select>
-        <option value="volvo">SIZE</option>
-        <option value="saab">L</option>
-        <option value="mercedes">M</option>
-        <option value="audi">S</option>
-      </select>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="#">Project name</a>
+
     </div>
-    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQHSuTteEuHM48Y7vs725-oc-oOxAwcGdMZPWt5-IPcFtqHb70H">
-    <div class='CustomColor item-footer'>
-      <p>T-SHIRT</p>
+
+    <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="">Default</a></li>
+        <li><a href="">Static top</a></li>
+        <li ng-class="{'cart-active': sold}"><a href=""><span style="font-size: 14px" class="glyphicon glyphicon-shopping-cart"></span></a></li>
+      </ul>
     </div>
-    <div class='pull-right item-footer text-rigth'>
-      <p>5,00$</p>
+  </div>
+</div>
+<div>
+  <div class="parent">
+    <div class="block">
+      <img src="../images/mauntins.png" alt=""/>
+    </div>
+    <div class="shadow"></div>
+  </div>
+</div>
+<div class="filter">
+
+  <input type='checkbox' ng-model="men" id="men" style="width:70px; height:15px">
+  <label for="men">MEN</label>
+  <input type='checkbox' name="data"  ng-model="women" id="women" style="width:70px; height:15px">
+  <label for="women">WOMEN</label>
+  <input type='checkbox' name="data"  ng-model="child" id="child" style="width:70px; height:15px">
+  <label for="child">CHILDROBOTOREN</label>
+
+
+  <div class="pull-right">
+    <button ng-click="filterReset()" class="form-control seeAll">SEE ALL PRODUCTS</button>
+  </div>
+
+
+</div>
+
+
+<div class="marketing">
+  <div class="item" ng-repeat="arr in arr">
+    <div class="wrap" ng-class="{'active': arr.active}">
+      <div>
+        <select ng-options="arr.s.subItem as size.name for size in arr.size track by size.id" ng-model="selected">
+          <option value=" ">SIZE</option>
+        </select>
+      </div>
+      <img ng-src="{{arr.img}}">
+      <div class='CustomColor item-footer'>
+        <p>{{arr.name}}</p>
+      </div>
+      <div class='pull-right item-footer text-rigth'>
+        <p>{{arr.price}}</p>
+      </div>
     </div>
   </div>
 </div>
